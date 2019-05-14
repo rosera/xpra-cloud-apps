@@ -3,7 +3,7 @@ Android Studio configuration for running apps inside a browser window using XPRA
 
 ## Introduction
 
-![VSCode running in XPRA](https://github.com/rosera/xpra-cloud-apps/blob/master/images/xpra_ascode.png)
+![Android Studio running in XPRA](https://github.com/rosera/xpra-cloud-apps/blob/master/images/xpra_ascode.png)
 
 This is a quick test of [XPRA](https://xpra.org) for the following application:
 
