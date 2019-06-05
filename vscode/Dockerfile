@@ -51,8 +51,8 @@ RUN apt-get update && apt-get -y install \
         --no-install-recommends \
         && rm -rf /var/lib/apt/lists/*
 
-ADD vscode.sh /usr/local/bin/vscode
-RUN chmod +x /usr/local/bin/vscode
+ADD vscode.sh /usr/local/bin/vscode.sh
+RUN chmod +x /usr/local/bin/vscode.sh
 ######## SAMPLE APPLICATION ##################
 
 #ENV HOME /home/user
@@ -76,4 +76,4 @@ EXPOSE 10000
 USER user
 
 # CMD to execute
-CMD xpra start --bind-tcp=0.0.0.0:10000 --html=on --exit-with-children --daemon=no --xvfb="/usr/bin/Xvfb +extension  Composite -screen 0 1920x1080x24+32 -nolisten tcp -noreset" --pulseaudio=no --notifications=no --bell=no --start-child=vscode
+CMD xpra start --bind-tcp=0.0.0.0:10000 --html=on --exit-with-children --daemon=no --xvfb="/usr/bin/Xvfb +extension  Composite -screen 0 1920x1080x24+32 -nolisten tcp -noreset" --pulseaudio=no --notifications=no --bell=no --start-child=vscode.sh
