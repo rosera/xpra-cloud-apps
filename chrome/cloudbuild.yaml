@@ -1,0 +1,12 @@
+steps:
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['build', '-t', 'gcr.io/$PROJECT_ID/chrome-xpra:${_CHROME_XPRA_VERSION}',
+           '-t', 'gcr.io/$PROJECT_ID/chrome-xpra',
+           '.']
+substitutions:
+  _CHROME_XPRA_VERSION: 1.0.0
+
+images:
+  - 'gcr.io/$PROJECT_ID/chrome-xpra:latest'
+  - 'gcr.io/$PROJECT_ID/chrome-xpra:${_CHROME_XPRA_VERSION}'
+tags: ['xpra', 'chrome']
